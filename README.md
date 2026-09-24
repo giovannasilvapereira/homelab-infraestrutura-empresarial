@@ -39,7 +39,9 @@ O **Proxmox VE 9.2** foi utilizado como hypervisor do laboratório. Cada
 função principal foi separada em uma máquina virtual para facilitar
 administração, testes e troubleshooting.
 
-![Ambiente virtualizado no Proxmox](images/01-proxmox.png)
+<img width="1270" height="958" alt="image" src="https://github.com/user-attachments/assets/5eff73bc-09b1-470d-9569-0d319a45f3a1" />
+
+
 
 ### Máquinas virtuais
 
@@ -93,7 +95,8 @@ O tráfego entre as VLANs não foi liberado de forma irrestrita.
 Foram criadas regras específicas no pfSense para permitir apenas os
 serviços necessários entre usuários e servidores.
 
-![Regras da VLAN10 no pfSense](images/02-pfsense-vlan10.png)
+<img width="1236" height="584" alt="95c456e9-b593-4a6f-87c5-7b481968b986" src="https://github.com/user-attachments/assets/42a0e4a1-d799-4caa-8f2e-1baa60817a77" />
+
 
 Entre as liberações implementadas estão:
 
@@ -120,7 +123,8 @@ Foram instalados e configurados:
 -   DNS;
 -   DHCP.
 
-![Serviços do Windows Server](images/03-server-manager.png)
+<img width="1286" height="805" alt="2d4e53ed-5542-4d8c-818a-79317fda21a3" src="https://github.com/user-attachments/assets/e4e2b621-bb93-4697-9198-325191a6e01a" />
+
 
 ### Organização do Active Directory
 
@@ -137,7 +141,8 @@ EMPRESA
     └── Administrativo
 ```
 
-![Estrutura de OUs no Active Directory](images/04-active-directory.png)
+<img width="768" height="524" alt="f5d3b81b-4b1c-4203-b247-fec4f7f03176" src="https://github.com/user-attachments/assets/678aee3d-1988-40b8-8a7a-5e5a1617cf44" />
+
 
 Também foi criado o grupo de segurança:
 
@@ -164,7 +169,8 @@ DNS:        10.10.20.10
 Domínio:    empresa.lab
 ```
 
-![Escopo DHCP da VLAN10](images/05-dhcp.png)
+<img width="989" height="401" alt="c976aad8-0cb5-4498-998c-179c48ee0eaa" src="https://github.com/user-attachments/assets/935ed6d1-ec85-40b3-8ec9-558d5dd7b53c" />
+
 
 Como clientes e servidor DHCP estão em redes diferentes, o **DHCP Relay
 do pfSense** foi utilizado para encaminhar as solicitações da VLAN10 até
@@ -247,7 +253,8 @@ Resultado após a configuração da regra no pfSense:
 TcpTestSucceeded : True
 ```
 
-![Teste da porta TCP 445](images/06-teste-smb-445.png)
+<img width="817" height="431" alt="image" src="https://github.com/user-attachments/assets/3e60d53a-3b36-4a0b-b121-75cb18033686" />
+
 
 ### Usuário autorizado
 
@@ -258,7 +265,8 @@ Um usuário pertencente ao `GG-TI` conseguiu:
 -   Editar e salvar;
 -   Excluir arquivo.
 
-![Acesso autorizado ao File Server](images/07-file-server-acesso.png)
+<img width="889" height="678" alt="image" src="https://github.com/user-attachments/assets/a86a9354-4d98-4f0d-9f2e-b965ab1075b4" />
+
 
 ### Usuário não autorizado
 
@@ -267,7 +275,8 @@ Também foi criado um usuário fora do grupo `GG-TI`.
 Ao tentar acessar o mesmo compartilhamento, o servidor recusou a
 solicitação.
 
-![Acesso negado ao File Server](images/08-file-server-negado.png)
+<img width="862" height="566" alt="image" src="https://github.com/user-attachments/assets/6c2db31c-aa07-4c99-af62-b2e2f00ae2b7" />
+
 
 Isso confirmou que o acesso não dependia apenas da conectividade SMB: as
 permissões NTFS baseadas em grupos do Active Directory também estavam
