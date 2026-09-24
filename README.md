@@ -410,11 +410,11 @@ ambiente de monitoramento.
 
 ## 📄 Documentação
 
-Uma versão detalhada do projeto em PDF está disponível na pasta:
+## 📄 Documentação completa
 
-``` text
-docs/
-```
+Para uma visão detalhada da implementação, arquitetura, testes e troubleshooting:
+
+[📄 Acessar o portfólio completo em PDF](Portfolio_Homelab_Infraestrutura_Empresarial_Giovanna.pdf)
 
 ------------------------------------------------------------------------
 
